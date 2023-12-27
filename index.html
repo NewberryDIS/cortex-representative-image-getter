@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Newberry Cortex: Get Representative MEI from Compound Object MEI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="./js/htmx.min.js"></script>
+    <script src="./js/_hyperscript.min.js"></script>
+    <script src="./js/dark-mode-toggle.js"></script>
+		<link rel="icon" href="./css/favicon.png" />
+  </head>
+  <body class="hidden">
+    <dark-mode-toggle></dark-mode-toggle>
+    <div id="input-container">
+      <form hx-get="/urlapi.php" hx-target="#results" >
+         <textarea id="url-input" name="ids" placeholder="insert urls, one on each line"></textarea>
+         <button type="submit"  class="input-button">Submit</button>
+      </form>
+    </div>
+    <div id="results" ></div>
+  </body>
+</html>

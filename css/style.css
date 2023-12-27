@@ -1,0 +1,107 @@
+:root {
+  --light: 233, 237, 246;
+  --dark: 33, 33, 33;
+  --accent-dark: 33, 87, 37;
+  --accent-light: 77, 171, 247;
+  --bg: var(--light);
+  --fg: var(--dark);
+  --accent: var(--accent-dark);
+  --accent-alt: var(--accent-light);
+}
+
+.dark {
+  --bg: var(--dark);
+  --fg: var(--light);
+  --accent: var(--accent-light);
+  --accent-alt: var(--accent-dark);
+}
+
+* {
+  box-sizing: border-box;
+  transition: 200ms;
+}
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--fg));
+  transition: 575ms;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  gap: 33px;
+}
+.hidden {
+  display: none;
+}
+* {
+  box-sizing: border-box;
+  transition: 200ms;
+}
+a {
+  color: rgb(var(--accent));
+}
+a:visited, a:hover, a:active {
+  color: rgba(var(--accent), 0.77);
+}
+button {
+  background: rgba(var(--accent-alt),1);
+  border: 1px solid rgba(var(--fg), 1);
+  border-radius: 0;
+  padding: 7px;
+  color: rgb(var(--fg));
+}
+button:hover {
+  background: rgba(var(--accent), 1);
+  color: rgb(var(--bg))
+}
+
+#input-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 10px;
+}
+@media screen and (max-width: 1023px) {
+  body {
+
+  justify-content: center;
+  flex-direction: column;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+
+  justify-content: start;
+  flex-direction: row;
+  }
+}
+textarea {
+  min-height: 100px;
+  min-width: 500px;
+}
+
+#results {
+  min-width: 30vw;
+}
+
+.csv-data {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+/* .button-wrapper { */
+/*   width: 100%; */
+/*   text-align: right; */
+/* } */
+.csv-button {
+
+  justify-self: end;
+}
